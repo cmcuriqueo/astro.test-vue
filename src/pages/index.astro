@@ -1,0 +1,32 @@
+---
+// Component Imports
+import Main from "../components/Main.vue";
+import Header from "../components/Header.vue";
+import Footer from "../components/Footer.astro";
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body class="bg-gray-900  w-full min-h-screen text-white">
+	<Header client:visible/>
+    <main>
+		<div class="bg-gray-200/80">
+			<div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+			  <h2 class="text-2xl font-bold tracking-tight text-gray-900">Customers also purchased</h2>
+				<Main client:visible/>
+			</div>
+		</div>
+			
+      </div>
+    </main>
+	<Footer/>
+  </body>
+</html>
